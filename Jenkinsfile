@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent none 
     options {
     timestamps()
     ansiColor('xterm')
@@ -7,13 +7,12 @@ pipeline {
     stages {
         stage('Checkout Stage') {
             steps {
-                git branch: 'main'
-                url: 'https://github.com/EwelinaCh/ci-cd-shared-libs.git'
+               git branch: 'main'
+               url: 'https://github.com/EwelinaCh/ci-cd-shared-libs.git'
             }
-          
          stage('Matrix Stage') {
              matrix {
-                      agent any
+                     agent any
                       axes {
                           axis {
                               name 'TARGET'
