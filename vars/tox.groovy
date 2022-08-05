@@ -1,3 +1,5 @@
-def call(task) {
-  sh 'tox -e ${task}'
+def call(action) {
+  
+  print_msg.green("Building ${action} tox action")
+  sh "tox -e ${action}"
 }
