@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Checkout Stage') {
             steps {
-               git branch: 'main',
-                   url: 'https://github.com/EwelinaCh/ci-cd-shared-libs.git'
+               git branch: 'master',
+                   url: 'https://opendev.org/jjb/jenkins-job-builder.git'
             }
         }
          stage('Matrix Stage') {
