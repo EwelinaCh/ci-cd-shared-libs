@@ -25,7 +25,7 @@ pipeline {
                           stage('TASK ${TASK}') {
                               steps {
                                 echo "Run ${TASK}"
-                                tox("${TASK}")
+                                tox('linters')
                               }
                           }
                     }
