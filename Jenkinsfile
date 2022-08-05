@@ -1,4 +1,4 @@
-
+@Library('ci-cd-shared-libs')
 
 pipeline {
     agent any
