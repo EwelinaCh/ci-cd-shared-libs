@@ -10,6 +10,7 @@ pipeline {
                git branch: 'main',
                    url: 'https://github.com/EwelinaCh/ci-cd-shared-libs.git'
             }
+        }
          stage('Matrix Stage') {
              matrix {
                   agent any
