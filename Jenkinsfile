@@ -1,3 +1,5 @@
+@library('ci-cd-shared-libs@main')
+
 pipeline {
     agent any
     options {
@@ -23,7 +25,7 @@ pipeline {
                           stage('TASK ${TASK}') {
                               steps {
                                 echo "Run ${TASK}"
-                                  sh 'tox -e ${TASK}'
+                                tox("${TASK}")
                               }
                           }
                     }
