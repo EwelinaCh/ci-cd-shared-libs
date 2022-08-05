@@ -1,5 +1,5 @@
 pipeline {
-    agent none 
+    agent any
     options {
     timestamps()
     ansiColor('xterm')
@@ -13,7 +13,6 @@ pipeline {
         }
          stage('Matrix Stage') {
              matrix {
-                  agent any
                       axes {
                          axis {
                             name 'TARGET'
