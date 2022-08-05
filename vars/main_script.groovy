@@ -24,6 +24,7 @@ pipeline {
                           stage('Build') {
                               steps {
                                 echo "Run ${TARGET}"
+                                  sh 'tox -e ${TARGET}'
                               }
                           }
                     }
