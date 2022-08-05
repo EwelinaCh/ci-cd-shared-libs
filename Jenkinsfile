@@ -15,15 +15,15 @@ pipeline {
              matrix {
                       axes {
                          axis {
-                            name 'TARGET'
+                            name 'TASK'
                             values 'linters', 'py32', 'docs'
                           }
                       }
                       stages {
-                          stage('Build') {
+                          stage('TASK ${TASK}') {
                               steps {
-                                echo "Run ${TARGET}"
-                                  sh 'tox -e ${TARGET}'
+                                echo "Run ${TASK}"
+                                  sh 'tox -e ${TASK}'
                               }
                           }
                     }
