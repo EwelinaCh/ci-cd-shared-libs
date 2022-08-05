@@ -32,4 +32,10 @@ pipeline {
                 }
             }
         }
+    
+    post {
+        always {
+            bat "tox -e cover"
+        }
     }
+}
