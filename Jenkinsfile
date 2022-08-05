@@ -22,10 +22,10 @@ pipeline {
                           }
                       }
                       stages {
-                          stage('TASK ${TASK}') {
+                          stage('TASKS') {
                               steps {
                                 echo "Run ${TASK}"
-                                tox('linters')
+                                tox("${TASK}")
                               }
                           }
                     }
