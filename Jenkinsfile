@@ -18,7 +18,7 @@ pipeline {
                       axes {
                          axis {
                             name 'TASK'
-                            values 'linters', 'py32', 'docs'
+                            values 'linters', 'py37', 'docs'
                           }
                       }
                       stages {
