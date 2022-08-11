@@ -3,5 +3,5 @@ def green(msg) {
 }
 
 def red(msg) {
-  println("\033[0;31mPrinting ${msg} in method RED\033[0m")
+  println("\033[0;31mPrinting ${msg} in method RED com\033[0m")
 }
